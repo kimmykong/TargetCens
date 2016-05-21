@@ -314,8 +314,27 @@ var Dakota = {
 var myStyle = {
     "color": "#cc0000",
     "weight": 5,
-    "opacity": 0.95
+    "opacity": 0.4
 };
+
+var myStyle2 = {
+    "color": "#cc0000",
+    "weight": 5,
+    "opacity": 0.30
+};
+
+var myStyle3 = {
+    "color": "#cc0000",
+    "weight": 5,
+    "opacity": 0.30
+};
+
+var myStyle4 = {
+    "color": "#cc0000",
+    "weight": 5,
+    "opacity": 0.40
+};
+
 
 
 L.geoJson(Hennepin, {
@@ -323,15 +342,15 @@ L.geoJson(Hennepin, {
 }).addTo(map);
 
 L.geoJson(Anoka, {
-    style: myStyle
+    style: myStyle2
 }).addTo(map);
 
 L.geoJson(Ramsey, {
-    style: myStyle
+    style: myStyle3
 }).addTo(map);
 
 L.geoJson(Dakota, {
-    style: myStyle
+    style: myStyle4
 }).addTo(map);
 
 </script>
