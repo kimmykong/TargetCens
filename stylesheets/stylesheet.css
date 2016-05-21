@@ -7,7 +7,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #cc0000; }
+  color: #cc0000; 
+  <h2>Spectacular Mountain</h2>
+  <img src="TargetLogo.jpg" alt="Mountain View" style="width:304px;height:228px;">
+}
 
 a {
   color: #1e6bb8;
