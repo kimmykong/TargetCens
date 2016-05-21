@@ -56,11 +56,11 @@
 <div id='legend' style='display:none;'>
   <strong>Annual Household Income (thousands)</strong>
   <nav class='legend clearfix'>
-    <span style='background:#cc0000; opacity: .2'></span>
-    <span style='background:#cc0000; opacity: .4'></span>
-    <span style='background:#cc0000;opacity: .6'></span>
-    <span style='background:#cc0000;opacity: .8'></span>
-    <span style='background:#cc0000;opacity: 1'></span>
+    <span style='background:#ffe804;></span>
+    <span style='background:#FFBE20;></span>
+    <span style='background:#E56A00;></span>
+    <span style='background:#E53C0E;></span>
+    <span style='background:#cc0000;></span>
     <label>0-10</label>
     <label>10-20</label>
     <label>20-30</label>
@@ -338,10 +338,33 @@ var Dakota = {
 
 
 var myStyle = {
-    "color": "#ff0000",
+    "color": "#cc0000",
     "weight": 5,
-    "opacity": 0.65
+        'paint': {
+            'fill-color': 'blue',
+            'fill-opacity': 0.8
+        }
 };
+
+var myStyle2 = {
+    // "color": "#cc0000",
+    "weight": 5,
+	"fill":"blue",
+    "fill-opacity": 0.10
+};
+
+var myStyle3 = {
+    "color": "#cc0000",
+    "weight": 5,
+    "fill-opacity": 0.30
+};
+
+var myStyle4 = {
+    "color": "#cc0000",
+    "weight": 5,
+    "fill-opacity": 0.90
+};
+
 
 
 L.geoJson(Hennepin, {
@@ -349,15 +372,15 @@ L.geoJson(Hennepin, {
 }).addTo(map);
 
 L.geoJson(Anoka, {
-    style: myStyle
+    style: myStyle2
 }).addTo(map);
 
 L.geoJson(Ramsey, {
-    style: myStyle
+    style: myStyle3
 }).addTo(map);
 
 L.geoJson(Dakota, {
-    style: myStyle
+    style: myStyle4
 }).addTo(map);
 
 
