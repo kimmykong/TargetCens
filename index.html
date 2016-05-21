@@ -29,15 +29,50 @@
   /*needs fixes*/
   #map { 
     position:fixed;
-    width:500px;
-    height:500px;
-    left:150px;
-    top:150px; }
+    width:650px;
+    height:650px;
+    left:200px;
+    top:25px; }
 
 </style>
 </head>
 <body>
-<div style="text-align: center;">
+
+<style>
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:20%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+</style>
+
+<!-- Set the display of this container to none so we can
+     add it programmatically to `legendControl` -->
+<div id='legend' style='display:none;'>
+  <strong>Annual Household Income (thousands)</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#cc0000; opacity: .2'></span>
+    <span style='background:#cc0000; opacity: .4'></span>
+    <span style='background:#cc0000;opacity: .6'></span>
+    <span style='background:#cc0000;opacity: .8'></span>
+    <span style='background:#cc0000;opacity: 1'></span>
+    <label>0-10</label>
+    <label>10-20</label>
+    <label>20-30</label>
+    <label>30-40</label>
+    <label>40-50</label>
+    <small>Source: <a href="http://census.gov">2010 Census</a></small>
+</div>
+
+
+
+
+<!-- <div style="text-align: center;"> -->
 
 <!-- <img src =  -->
 
@@ -46,7 +81,9 @@
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoia2ltbXlrb25nIiwiYSI6ImNpb2drNWFycTAwMDl1aG0xZW94ZmUyMm8ifQ.QiWNRsfIr1iPOiQzTWXBXw';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([44.9778, -93.2650], 9);
+    .setView([44.85, -93.2650], 9);
+
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);    
 
 /*makes a marker, we need these for all the stores*/
 var circle = L.circle([44.975917, -93.27410399], 50, {
